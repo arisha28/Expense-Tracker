@@ -1,8 +1,8 @@
-import { Container, Row, Col, Form, Button, Card, InputGroup, Badge } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Card, InputGroup } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react';
 
-// Helper for category styling and emojis
+
 const CATEGORY_UI = {
     'Food': { emoji: '🍔', badgeBg: '#d1fae5', badgeText: '#059669', icon: '🛒' },
     'Housing': { emoji: '🏠', badgeBg: '#ffedd5', badgeText: '#ea580c', icon: '🏠' },
@@ -80,14 +80,12 @@ function ExpenseTrackerDashboard() {
     };
 
     return (
-        <div style={{ backgroundColor: '#F8FAFC', minHeight: '100vh', paddingBottom: '3rem' }}>
+        <div style={{ backgroundColor: '#F8FAFC' }}>
             <Container className="pt-5">
                 {/* HEADER */}
                 <div className="d-flex align-items-center mb-4">
-                    <h1 className="fw-bold mb-0 me-3" style={{ color: '#0F172A' }}>Interactive Expense Tracker</h1>
-                    <Badge bg="light" text="primary" className="border text-primary px-3 py-2 rounded-pill shadow-sm">
-                        Built with React + Bootstrap
-                    </Badge>
+                    <h1 className="fw-bold mb-0 me-3" style={{ color: '#0F172A' }}>Expense Tracker</h1>
+                    
                 </div>
 
                 <Row className="g-4">
@@ -127,16 +125,11 @@ function ExpenseTrackerDashboard() {
                                     <Button type='submit' className="w-100 fw-semibold p-2 mb-2 border-0 rounded-3" style={{ backgroundColor: '#4F46E5' }}> 
                                         Add Expense 
                                     </Button>
-                                    
-                                    <div className="text-warning small d-flex align-items-center">
-                                        <span className="me-1">ⓘ</span> Warning or validate if empty
-                                    </div>
                                 </Form>
                             </Card.Body>
                         </Card>
                     </Col>
 
-                    {/* RIGHT COLUMN: DASHBOARD & LIST */}
                     <Col lg={8}>
                         {/* SUMMARY CARDS */}
                         <Row className="g-3 mb-4">
