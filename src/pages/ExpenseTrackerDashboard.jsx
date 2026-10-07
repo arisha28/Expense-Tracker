@@ -190,7 +190,7 @@ function ExpenseTrackerDashboard() {
                                     placeholder="Search expenses..." 
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className="rounded-pill shadow-none border-secondary-subtle px-3 py-2"
+                                    className="rounded-pill shadow-none border-secondary-subtle px-3 py-2 w-100 "
                                     style={{ maxWidth: '200px' }}
                                 />
                             </Card.Body>
